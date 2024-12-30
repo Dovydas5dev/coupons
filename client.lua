@@ -1,8 +1,8 @@
-RegisterCommand('kodas', function()
+RegisterCommand('code', function()
     local input = lib.inputDialog('Įveskite kupono kodą:', {
         {
             type = 'input',
-            label = 'Kodas',
+            label = 'Code',
             required = true,
         }
     })
@@ -11,11 +11,11 @@ RegisterCommand('kodas', function()
         TriggerServerEvent('d-coupons:checkcode', input[1])
     else
         lib.notify({
-            title = 'Klaida',
-            description = 'Neįvestas kodas!',
+            title = 'Coupons system',
+            description = 'No code entered!!',
             type = 'error'
         })
     end
 end)
 
-TriggerEvent('chat:addSuggestion', '/kodas', 'Įveskite kupono kodą ir gaukite pinigų bonusą')
+TriggerEvent('chat:addSuggestion', '/code', 'Enter the coupon code and get a cash bonus')
