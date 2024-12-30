@@ -5,5 +5,3 @@ Config.Coupons = {
     ["code2"] = 50,
     ["code3"] = 200,
 }
-
-Config.UsedCoupons = {}
