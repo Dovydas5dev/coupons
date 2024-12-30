@@ -1,9 +1,9 @@
 Config = {}
 
 Config.Coupons = {
-    ["labas"] = 100,
-    ["HALF50"] = 50,
-    ["BONUS200"] = 200,
+    ["code1"] = 100,
+    ["code2"] = 50,
+    ["code3"] = 200,
 }
 
 Config.UsedCoupons = {}
