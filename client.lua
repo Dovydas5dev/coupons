@@ -1,5 +1,5 @@
 RegisterCommand('code', function()
-    local input = lib.inputDialog('Įveskite kupono kodą:', {
+    local input = lib.inputDialog('Enter coupon code:', {
         {
             type = 'input',
             label = 'Code',
