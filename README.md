@@ -8,7 +8,6 @@
 - Codes and their rewards are fully configurable in `config.lua`.
 
 # Requirements:
-[es_extended](https://github.com/esx-framework/esx_core/releases)
 [ox_lib](https://github.com/overextended/ox_lib)
 
 # Usage:
