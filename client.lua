@@ -1,4 +1,4 @@
-RegisterCommand('code', function()
+RegisterNetEvent('d-coupons:showInput', function()
     local input = lib.inputDialog('Enter coupon code:', {
         {
             type = 'input',
@@ -8,13 +8,13 @@ RegisterCommand('code', function()
     })
 
     if input and input[1] then
-        TriggerServerEvent('d-coupons:checkcode', input[1])
-    else
-        lib.notify({
-            title = 'Coupons system',
-            description = 'No code entered!!',
-            type = 'error'
-        })
+        lib.callback('d-coupons:checkcode', false, function(response)
+            if response.success then
+                lib.notify({ title = 'Coupons system', description = response.message, type = 'success' })
+            else
+                lib.notify({ title = 'Coupons system', description = response.message, type = 'error' })
+            end
+        end, input[1])
     end
 end)
 
