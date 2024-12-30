@@ -8,13 +8,13 @@ AddEventHandler('d-coupons:checkcode', function(kodas)
     local xPlayer = ESX.GetPlayerFromId(source)
 
     if not xPlayer then
-        TriggerClientEvent('ox_lib:notify', source, { title = 'Kuponas', description = 'Nepavyko gauti žaidėjo duomenų!', type = 'error' })
+        TriggerClientEvent('ox_lib:notify', source, { title = 'Coupons system', description = 'Failed to retrieve player data!', type = 'error' })
         return
     end
 
     local suma = Config.Coupons[kodas]
     if not suma then
-        TriggerClientEvent('ox_lib:notify', source, { title = 'Kuponas', description = 'Neteisingas kupono kodas!', type = 'error' })
+        TriggerClientEvent('ox_lib:notify', source, { title = 'Coupons system', description = 'Invalid coupon code!', type = 'error' })
         return
     end
 
@@ -23,7 +23,7 @@ AddEventHandler('d-coupons:checkcode', function(kodas)
         ['@kodas'] = kodas
     }, function(count)
         if count > 0 then
-            TriggerClientEvent('ox_lib:notify', source, { title = 'Kuponas', description = 'Šis kuponas jau buvo panaudotas!', type = 'warning' })
+            TriggerClientEvent('ox_lib:notify', source, { title = 'Coupons system', description = 'This coupon has already been used!', type = 'warning' })
             return
         end
 
@@ -34,6 +34,6 @@ AddEventHandler('d-coupons:checkcode', function(kodas)
             ['@kodas'] = kodas
         })
 
-        TriggerClientEvent('ox_lib:notify', source, { title = 'Kuponas', description = 'Sėkmingai gavote ' .. suma .. ' EUR grynaisiais!', type = 'success' })
+        TriggerClientEvent('ox_lib:notify', source, { title = 'Coupons system', description = 'You have successfully received ' .. suma .. '$ in cash!', type = 'success' })
     end)
 end)
