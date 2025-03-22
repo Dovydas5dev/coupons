@@ -17,5 +17,3 @@ RegisterNetEvent('d-coupons:showInput', function()
         end, input[1])
     end
 end)
-
-TriggerEvent('chat:addSuggestion', '/code', 'Enter the coupon code and get a cash bonus')
