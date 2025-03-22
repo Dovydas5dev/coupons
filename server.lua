@@ -26,6 +26,6 @@ end)
 
 lib.addCommand('code', {
     help = 'Open the coupon input window',
-}, function(source, args, rawCommand)
+}, function(source)
     TriggerClientEvent('d-coupons:showInput', source)
 end)
