@@ -24,8 +24,8 @@ lib.callback.register('d-coupons:checkcode', function(source, kodas)
     return { success = true, message = 'You have successfully received ' .. suma .. '$ in cash!' }
 end)
 
-RegisterCommand('code', function(source, args, rawCommand)
-    local playerSource = source
-
-    TriggerClientEvent('d-coupons:showInput', playerSource)
-end, false)
+lib.addCommand('code', {
+    help = 'Open the coupon input window',
+}, function(source, args, rawCommand)
+    TriggerClientEvent('d-coupons:showInput', source)
+end)
