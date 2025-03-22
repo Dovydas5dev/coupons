@@ -1,7 +1,8 @@
 Config = {}
 
 Config.Coupons = {
-    ["code1"] = 100,
-    ["code2"] = 50,
-    ["code3"] = 200,
+    ["code1"] = 100, -- Amount ($)
+    ["code2"] = 50,  -- Amount ($)
+    ["code3"] = 200, -- Amount ($)
+    -- You can add more coupons
 }
